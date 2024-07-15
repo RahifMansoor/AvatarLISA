@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>AT&T Cybersecurity Policy GenAI</title>
+
+  <link href="./css/styles.css" rel="stylesheet" />
+
+  <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+  <script src="./js/main.js"></script>
+
+  <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="header">
+    <img src="images/att.png" alt="Logo" width="32" height="33" />
+    <span class="header__title">AT&T Cybersecurity Policy GenAI</span>
+
+    <ul class="menu-items">
+      <!-- <li>HIKE</li>
+      <li>CAMP</li>
+      <li>CLIMB</li>
+      <li>CYCLE</li>
+      <li>SNOW</li>
+      <li>PADDLE</li>
+      <li>YOGA</li>
+      <li>CART (0)</li> -->
+    </ul>
+  </div>
+
+  <div class="title">
+    <h1>AskCSO Virtual Avatar</h1>
+  </div>
+
+  <div class="main">
+    <div class="main-block">
+      <h2>Here are some things AskCSO Avatar can help you with:</h2>
+
+      <div class="suggested-questions">
+        <button onclick="window.speak('What are the best practices for deploying Azure web apps?')">
+          What are the best practices for deploying Azure web apps?
+        </button>
+  
+        <button onclick="window.speak('How to  ensure compliance with ASTRA policies when using Azure services?')">
+          How to  ensure compliance with ASTRA policies when using Azure services?
+        </button>
+  
+        <button onclick="window.speak('What security measures should be implemented for Azure VM?')">
+          What security measures should be implemented for Azure VM?
+        </button>
+  
+        <button onclick="window.speak('How can I report a security incident?')">
+          How can I report a security incident?'
+        </button>
+      </div>
+    </div>
+
+    <div class="avatar-block">
+      <div id="remoteVideo">
+      </div>
+      <canvas id="canvas" width="720" height="1080" style="background-color: transparent;" hidden="hidden"></canvas>
+      <canvas id="tmpCanvas" width="720" height="1080" hidden="hidden"></canvas>
+      
+      <fluent-card class="record-card">
+        <div class="outerbutton">
+          <button id="startRecording" onclick="window.startRecording()" class="round-button">
+            <i id="buttonIcon" class="fas fa-microphone"></i>
+          </button>
+        </div>
+
+        <label id="spokenText" for="spokenText">
+          Press the mic to start talking
+        </label>
+      </fluent-card>
+    </div>
+
+    <div class="main-block">
+      <ul id="chathistory" class="chat-history"></ul>
+    </div>
+  </div>
+<!-- 
+  <div id="loginOverlay">
+    <div id="gradientOverlay">
+      <div class="loginCard">
+        <div class="loginCard__header">Login</div>
+
+        <fluent-text-field appearance="outline" placeholder="user@email.com">Username</fluent-text-field>
+        <fluent-text-field appearance="outline" placeholder="****************">Password</fluent-text-field>
+
+        <button id="playVideo" onclick="window.startSession()">
+          <span id="playVideo__text" class="playVideo__text">Login</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body> -->
+
+</html>
